@@ -54,51 +54,7 @@
         </main>
     </div>
 
-    <!-- JavaScript to load Navigation, handle interactions, and set active link -->
-    <script>
-        // Fetch and inject the navigation bar
-        fetch('nav.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-
-                // --- Mobile Menu Toggle ---
-                // This code needs to run *after* the nav is loaded
-                const navToggle = document.getElementById('nav-toggle');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (navToggle && mobileMenu) {
-                    navToggle.addEventListener('click', function() {
-                        mobileMenu.classList.toggle('hidden');
-                    });
-                }
-
-                // --- Highlight Active Nav Link ---
-                const currentPage = window.location.pathname.split('/').pop() || 'index.html'; // Default to index.html if path is empty
-                const navLinks = document.querySelectorAll('#nav-menu a, #mobile-menu a');
-
-                navLinks.forEach(link => {
-                    const linkPage = decodeURIComponent(link.getAttribute('href').split('/').pop());
-                    
-                    if (linkPage === decodeURIComponent(currentPage)) {
-                        link.classList.add('text-blue-600', 'font-bold');
-                        link.classList.remove('text-gray-700');
-
-                        // Add a different active style for the mobile menu
-                        if (link.closest('#mobile-menu')) {
-                            link.classList.add('bg-blue-100');
-                        }
-                    }
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching navigation:', error);
-                document.getElementById('navbar-placeholder').innerHTML = '<p class="text-center text-red-500">Error: Navigation could not be loaded.</p>';
-            });
-    </script>
+    <!-- Main JavaScript file for navigation and other interactions -->
+    <script src="main.js"></script>
 </body>
 </html>
