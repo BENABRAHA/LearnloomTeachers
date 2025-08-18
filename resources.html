@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Resources - Learnloom</title>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navigation Placeholder -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow container mx-auto p-8">
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-6">Teaching Resources</h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Here you can find a curated library of lesson plans, educational tools, and other materials to assist in your tutoring sessions.
+                </p>
+
+                <!-- Resource Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border p-6 rounded-xl hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lesson Plans</h3>
+                        <p class="text-gray-600">Download grade-specific lesson plans and activities.</p>
+                    </div>
+                    <div class="border p-6 rounded-xl hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Approved Educational Games</h3>
+                        <p class="text-gray-600">A list of vetted online games and tools for interactive learning.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Main JavaScript file for navigation and other interactions -->
+    <script src="main.js"></script>
+</body>
+</html>
